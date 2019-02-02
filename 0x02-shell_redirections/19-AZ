@@ -1,2 +1,2 @@
 #!/bin/bash
-cat "A" "c" | "Z" "e"
+tr A c | Z e
