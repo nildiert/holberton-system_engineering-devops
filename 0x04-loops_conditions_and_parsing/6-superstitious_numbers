@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+COUNT=1
+while (( COUNT < 21 ))
+do
+    if [ "$COUNT" -eq 5 ]
+    then
+	echo "bad luck from China"
+    elif [ "$COUNT" -eq 10 ]
+    then
+	echo "bad luck from Japan"
+    elif [ "$COUNT" -eq 18 ]
+    then
+	echo "bad luck from Italy"
+    fi
+	echo "$COUNT"
+    (( COUNT++ ))
+done
