@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+for ((n=1;n<101;n++))
+do
+    if (( n % 3 != 0 && n % 5 != 0 ))
+    then
+	echo "$n"
+    else
+	if (( n % 15 == 0 ))
+	then
+	    echo "FizzBuzz"
+	elif (( n % 3 == 0 ))
+	then
+	    echo "Fizz"
+	elif (( n % 5 == 0 ))
+	then
+	    echo "Buzz"
+        fi
+    fi
+done
