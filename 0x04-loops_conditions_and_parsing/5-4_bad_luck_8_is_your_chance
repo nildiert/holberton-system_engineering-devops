@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+HOLBI="Holberton School"
+COUNT=0
+while (( COUNT < 10 ))
+do
+    if [ "$COUNT" -eq "3" ]
+    then
+	echo "bad luck"
+    elif [ "$COUNT" -eq "7" ]
+    then
+	echo "good luck"
+    else
+	echo "$HOLBI"
+    fi
+    (( COUNT++ ))
+done
