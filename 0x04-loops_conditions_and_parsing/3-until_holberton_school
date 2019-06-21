@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+HOLBI="Holberton School"
+COUNT=9
+until [ $COUNT -lt "0" ]
+do
+    echo "$HOLBI"
+    (( COUNT-- ))
+done
