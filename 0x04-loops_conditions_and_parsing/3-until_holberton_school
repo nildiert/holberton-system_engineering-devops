@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
 HOLBI="Holberton School"
 COUNT=9
 until [ $COUNT -lt "0" ]

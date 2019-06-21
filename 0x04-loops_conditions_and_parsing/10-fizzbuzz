@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
 for ((n=1;n<101;n++))
 do
     if (( n % 3 != 0 && n % 5 != 0 ))
