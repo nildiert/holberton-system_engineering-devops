@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script kill the process and the people, like Uribe
+process="$(pgrep -f bash)"
+for i in $process
+do
+    kill "$i"
+done
