@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This script kill the process and the people, like Uribe
-process="$(pgrep -f bash)"
+process="$(pgrep -f 4-to_infinity_and_beyond)"
 for i in $process
 do
     kill "$i"
