@@ -2,8 +2,8 @@
 # This script displaying process in a user-oriented format
 echo $$ >> /var/run/holbertonscript.pid
 trap 'echo "I hate the kill command"' 15
-trap 'rm /var/run/holbertonscript.pid' 15 3
 trap 'echo "Y U no love me?!"' 2
+trap 'sudo pkill -f /var/run/holbertonscript.pid; rm /var/run/holbertonscript.pid' 15 3
 
 while :
 do
