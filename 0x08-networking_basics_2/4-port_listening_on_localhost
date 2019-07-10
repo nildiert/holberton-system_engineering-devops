@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# Function to listen the port 80
 nc -l 80
