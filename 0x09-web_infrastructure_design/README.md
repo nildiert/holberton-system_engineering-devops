@@ -22,9 +22,6 @@ What you should learn from this project:
 * On a whiteboard, design a three server web infrastructure that hosts the website www.foobar.com, it must be secured, serve encrypted traffic, and be monitored.
 
 
-### [3. Scale up](./3-scale_up)
-* Readme
-
 ---
 
 ## Author
