@@ -1,3 +1,6 @@
+#!/usr/bin/env bash
+#Create a puppet file
+
 file { "/tmp/holberton":
   mode => '0744',
   owner => www-data,
