@@ -1,4 +1,5 @@
+# kill the proccess killmenow with pp
 exec { 'killmenow':
   command  => 'pkill killmenow',
-  path     => '/usr/bin/'
+  provider => 'shell'
 }
