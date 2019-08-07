@@ -2,5 +2,5 @@
 #! Script to install Nginx in a server
 apt-get -y update
 apt-get install -y nginx
-echo "Holberton School" > /var/share/nginx/html/index.html
+echo "Holberton School" > /usr/share/nginx/html/index.html
 service nginx restart
