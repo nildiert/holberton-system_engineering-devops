@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# redirect with 301
+
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo echo "Ceci n'est pas une page" > /var/www/html/404_error.html
+sudo sed -i "52i \\\terror_page 404 \/404_error.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}" /etc/nginx/sites-available/default 
+sudo service nginx restart
