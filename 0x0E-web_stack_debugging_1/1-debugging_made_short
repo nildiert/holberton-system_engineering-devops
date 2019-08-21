@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Second script to repair nginx
 pkill nginx
-sudo sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
+sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 pkill -o nginx
 service nginx restart
