@@ -1,7 +1,16 @@
 # install nginx using puppet
-package{ "nginx":
+exec { 'update':
+  command  => 'sudo apt-get update',
+  provider => 'shell'
+}
+-> package{ "nginx":
 ensure => 'present',
 }
+exec { 'update':
+  command  => '"Holberton School" > /usr/share/nginx/html/index.html',
+  provider => 'shell'
+}
+
 -> file { '/tmp/holberton':
 ensure    => 'present',
   path    => '/var/www/html/index.nginx-debian.html',
