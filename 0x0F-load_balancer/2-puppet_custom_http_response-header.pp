@@ -1,17 +1,8 @@
 # install nginx using puppet
-exec { 'update':
-  command  => 'sudo apt-get update',
-  provider => 'shell'
-}
--> package{ "nginx":
+package{ "nginx":
 ensure => 'present',
 }
--> exec { 'Other thing':
-  command  => '"Holberton School" > /usr/share/nginx/html/index.html',
-  provider => 'shell'
-}
-
--> file { '/tmp/holberton':
+-> file { '/var/www/html/index.nginx-debian.html':
 ensure    => 'present',
   path    => '/var/www/html/index.nginx-debian.html',
   content => 'Holberton School',
@@ -30,7 +21,7 @@ ensure    => 'present',
 -> file_line { 'Adding config':
    path  => '/etc/nginx/nginx.conf',
   line => 'sendfile on;
-add_header X-Served-By $HOSTNAME;',
+add_header X-Served-By $hostname;',
    match => 'sendfile on;',
    }
 -> exec { 'restart':
