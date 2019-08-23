@@ -6,7 +6,7 @@ exec { 'update':
 -> package{ "nginx":
 ensure => 'present',
 }
-exec { 'update':
+-> exec { 'update':
   command  => '"Holberton School" > /usr/share/nginx/html/index.html',
   provider => 'shell'
 }
