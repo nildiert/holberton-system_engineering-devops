@@ -21,7 +21,7 @@ ensure    => 'present',
 -> file_line { 'Adding config':
    path  => '/etc/nginx/nginx.conf',
   line => 'sendfile on;
-add_header X-Served-By $hostname;',
+add_header X-Served-By $HOSTNAME;',
    match => 'sendfile on;',
    }
 -> exec { 'restart':
