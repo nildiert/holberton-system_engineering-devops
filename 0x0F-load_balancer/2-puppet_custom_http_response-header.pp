@@ -1,5 +1,8 @@
 # install nginx using puppet
-package{ "nginx":
+exec { 'apt-update':
+     command => '/usr/bin/apt-get -y update'
+}
+-> package{ "nginx":
 ensure => 'present',
 }
 -> file { '/var/www/html/index.nginx-debian.html':
