@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Script to reinstall mysql
+echo "******************************************"
+echo "************ Installing MySql ************"
+echo "******************************************"
+echo ""
+./install_mysql
+echo "******************************************"
+echo "********** Uninstalling MySql ************"
+echo "******************************************"
+./uninstall_mysql
+echo ""
