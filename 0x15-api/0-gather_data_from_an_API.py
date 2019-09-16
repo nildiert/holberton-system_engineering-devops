@@ -20,7 +20,7 @@ try:
     print("Employee {} is done with tasks({}/{}):".format(
         user['name'], completed, len(todos)))
     for title_task in tasks:
-        print("\t{}".format(title_task))
+        print("\t {}".format(title_task))
 
 except Exception as err:
     pass
