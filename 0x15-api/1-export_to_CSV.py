@@ -29,12 +29,12 @@ try:
         except:
             pass
         with open(filename, 'a') as writeFile:
-            writer = csv.writer(writeFile)
+            writer = csv.writer(writeFile, dialect='myDialect')
             writer.writerow(row)
 
-        readFile.close()
-        writeFile.close()
         row = []
+    readFile.close()
+    writeFile.close()
 
 
 except Exception as err:
