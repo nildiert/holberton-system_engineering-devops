@@ -15,32 +15,32 @@ In order to make a REST call, the first step is to import the python `requests` 
 
 
     import requests
-        response = requests.get("www.dummyurl.com")
+    response = requests.get("www.dummyurl.com")
 
 
 > Python also provides a way to create alliances using the as keyword.
 
     import requests as reqs
-        response = reqs.get('https://www.google.com')
+    response = reqs.get('https://www.google.com')
 
 To make the first request, we will be using [JSONPlaceholder](https://jsonplaceholder.typicode.com/) API which provides JSON response for specific item like posts, todos, and albums. So, the `/todos/1` API will respond with the details of a TODO item.
 
 
     url = 'https://jsonplaceholder.typicode.com/todos/1'
-        response = requests.get(url)
-	    print(response.status_code)
-	        print(response.text)
+    response = requests.get(url)
+    print(response.status_code)
+    print(response.text)
 
 
 The execution of above snippet will provide the result:
 
     200
         {
-	      "userId": 1,
-	            "id": 1,
-		          "title": "delectus aut autem",
-			        "completed": false
-				    }
+            "userId": 1,
+            "id": 1,
+            "title": "delectus aut autem",
+            "completed": false
+        }
 
 The status code `200` means a successful execution of request and `response.content` will return the actual JSON response of a TODO item.
 
