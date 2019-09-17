@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 # Api get
-from sys import argv
 import json
+from sys import argv
 import requests
-
-
 
 
 try:
@@ -20,7 +18,7 @@ try:
 
     filename = "{}.json".format(argv[1])
     for tasks in todos:
-        aux = tasks['title']
+        aux = tasks.get('title')
         del(tasks['title'])
         del(tasks['userId'])
         del(tasks['id'])
