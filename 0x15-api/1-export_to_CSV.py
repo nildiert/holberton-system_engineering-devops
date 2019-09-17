@@ -21,20 +21,16 @@ try:
         tasks['username'] = user.get('username')
         for key in keys:
             row.append(tasks[key])
-            try:
-                with open(filename, 'r') as readFile:
-                    reader = csv.reader(readFile)
-                    lines = list(reader)
-            except:
-                pass
-            with open(filename, 'a') as writeFile:
-                writer = csv.writer(writeFile, dialect='myDialect')
-                writer.writerow(row)
-
-    row = []
-    readFile.close()
-    writeFile.close()
-
+        try:
+            with open(filename, 'r') as readFile:
+                reader = csv.reader(readFile)
+                lines = list(reader)
+        except:
+            pass
+        with open(filename, 'a') as writeFile:
+            writer = csv.writer(writeFile, dialect='myDialect')
+            writer.writerow(row)
+            row = []
 
 except Exception as err:
     pass
