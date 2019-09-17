@@ -1,8 +1,10 @@
 #!/usr/bin/python3
 # Api get
-import requests
 from sys import argv
 import json
+import requests
+
+
 
 
 try:
