@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 # Api get
+from sys import argv
 import json
 import requests
-from sys import argv
+
 
 
 
