@@ -6,12 +6,12 @@ from sys import argv
 
 def recurse(subreddit, hot_list=[], after=""):
     ''' Recursive function '''
-    try:
-        url = "https://www.reddit.com/r/{}/hot.json?after={}".format(
-            argv[1], after)
-        user_agent = "Nildiert"
-        headers = {'User-Agent': user_agent}
-        response = requests.get(url, headers=headers, allow_redirects=False)
+    url = "https://www.reddit.com/r/{}/hot.json?after={}".format(
+        argv[1], after)
+    user_agent = "Nildiert"
+    headers = {'User-Agent': user_agent}
+    response = requests.get(url, headers=headers, allow_redirects=False)
+    if response:
         data = response.json().get('data')
         children = data.get('children')
         after = data.get('after')
@@ -20,5 +20,5 @@ def recurse(subreddit, hot_list=[], after=""):
             return recurse(subreddit, hot_list, after)
         else:
             return hot_list
-    except Exception as err:
+    else:
         return None
