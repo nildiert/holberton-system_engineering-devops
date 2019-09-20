@@ -12,9 +12,10 @@ def recurse(subreddit, hot_list=[], after=""):
         headers = {'User-Agent': user_agent}
         response = requests.get(url, headers=headers, allow_redirects=False)
         data = response.json().get('data')
+        children = data.get('children')
         after = data.get('after')
-        if after is not None and 'children' in data:
-            hot_list.append(after)
+        if after is not None and children:
+            [hot_list.append(tit.get('data').get('title') for ti in children)]
             return recurse(subreddit, hot_list, after)
         else:
             return hot_list
