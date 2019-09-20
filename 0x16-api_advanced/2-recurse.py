@@ -5,6 +5,7 @@ from sys import argv
 
 
 def recurse(subreddit, hot_list=[], after=""):
+    ''' Recursive function '''
     try:
         url = "https://www.reddit.com/r/{}/hot.json?after={}".format(
             argv[1], after)
