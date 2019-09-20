@@ -19,4 +19,4 @@ def recurse(subreddit, hot_list=[], after=""):
         else:
             return hot_list
     except Exception as err:
-        pass
+        return None
