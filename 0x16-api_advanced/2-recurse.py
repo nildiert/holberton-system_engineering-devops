@@ -13,7 +13,7 @@ def recurse(subreddit, hot_list=[], after=""):
         response = requests.get(url, headers=headers, allow_redirects=False)
         data = response.json().get('data')
         after = data.get('after')
-        if after is not None:
+        if after is not None and 'children' in data:
             hot_list.append(after)
             return recurse(subreddit, hot_list, after)
         else:
