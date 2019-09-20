@@ -10,7 +10,7 @@ def recurse(subreddit, hot_list=[], after=""):
             argv[1], after)
         user_agent = "Nildiert"
         headers = {'User-Agent': user_agent}
-        response = requests.get(url, headers=headers)
+        response = requests.get(url, headers=headers, allow_redirects=True)
         data = response.json().get('data')
         after = data.get('after')
         if after is not None:
