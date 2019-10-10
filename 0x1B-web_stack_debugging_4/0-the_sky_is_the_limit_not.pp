@@ -4,6 +4,6 @@ exec { '/etc/default/nginx':
   provider => 'shell'
 }
 -> exec { 'Restart Nginx':
-   command  => "sudo service nginx restart",
-   provider => 'shell'
+  command  => 'sudo service nginx restart',
+  provider => 'shell'
 }
